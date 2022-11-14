@@ -1,0 +1,53 @@
+@supports (font-size-adjust: 1) {
+
+    label,
+    input {
+        font-size-adjust: 0.5;
+    }
+}
+
+body {
+    background-image: linear-gradient(to right, #fffbd5, #b20a2c);
+    line-height: calc(1ex/0.32);
+}
+
+div.question-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    height: 20%;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-box input[type*='text'] {
+    border-style: none;
+    border-bottom: 3px solid gray;
+    width: 90%;
+}
+
+input:focus-visible {
+    outline-style: none;
+}
+
+.next-btn {
+    border-radius: 8px;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+}
+
+.next-btn:hover {
+    opacity: 0.8;
+}
+
+.stuff {
+    display: flex;
+}
