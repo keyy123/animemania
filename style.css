@@ -11,7 +11,8 @@ body {
     line-height: calc(1ex/0.32);
 }
 
-div.question-box {
+main {
+    text-align: center;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -24,7 +25,27 @@ div.question-box {
     transform: translate(-50%, -50%);
     border-radius: 12px;
     justify-content: center;
+}
+
+
+div.question-box {
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+    width: 50%;
+    height: 20%;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* border-radius: 12px; */
+    justify-content: center;
     align-items: center;
+}
+
+div.question-box [type='text']:invalid {
+    outline: 2px solid red;
 }
 
 .question-box input[type*='text'] {
