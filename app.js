@@ -52,3 +52,9 @@ nextBtns[2].addEventListener("click", () => {
     }, 3000);
 });
 
+
+let button = document.querySelector("#toggle-mode");
+button.onClick = () => {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+}
