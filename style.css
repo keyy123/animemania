@@ -12,3 +12,64 @@ body {
     color: var(--text-color);
     background-color: var(--bkg-color);
 }
+
+.icon::before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+
+/* Learning How to make a toggle switch out of checkbox and label */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    background-color: gray;
+    width: 20px;
+    height: 10px;
+    border-radius: 35px;
+}
+
+/* .switch::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f186";
+    vertical-align: center;
+    display: inline-block;
+    z-index: 2;
+} */
+
+.switch::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f186';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.5s all;
+    vertical-align: center;
+    font-size: 8px;
+}
+
+.checkbox:checked+.switch::after {
+    /* Parent Container width - element size - position */
+    left: 12px;
+    content: '\f185';
+    vertical-align: center;
+    font-size: 8px;
+}
+
+.checkbox:checked+.switch {
+    background-color: green;
+}
+
+.checkbox {
+    display: none;
+}
