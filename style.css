@@ -1,3 +1,9 @@
+/* 
+
+How to make dynamic styles using CSS custom properties? 
+
+Make conditional CSS style declaration for dark mode via CSS variables?
+*/
 :root {
     --text-color: #222;
     --bkg-color: #fff;
@@ -11,6 +17,9 @@
 body {
     color: var(--text-color);
     background-color: var(--bkg-color);
+    /* How to set your footer to the bottom of the page in CSS? */
+    min-height: 100vh;
+    margin: 0;
 }
 
 .icon::before {
@@ -23,9 +32,9 @@ body {
     line-height: 1;
 }
 
+/* Navbar Section */
 
-/* Learning How to make a toggle switch out of checkbox and label */
-
+/* How do we make a toggle switch from scratch using HTML and CSS?*/
 .switch {
     position: relative;
     display: inline-block;
@@ -37,18 +46,16 @@ body {
 
 label[for='toggle'] {
     grid-row: 1/1;
-    grid-column: 7/span 1;
+    grid-column: 10/span 1;
     align-self: center;
 }
 
-/* .switch::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f186";
-    vertical-align: center;
-    display: inline-block;
-    z-index: 2;
-} */
+/* 
+How to add font awesome icon via CSS w/o HTML? 
 
+How do we center font-awesome icons that dont have HTML tags?
+
+*/
 .switch::after {
     font-family: "Font Awesome 5 Free";
     content: '\f186';
@@ -97,9 +104,10 @@ label[for='toggle'] {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(1, 1fr);
     column-gap: 10px;
-    margin: 0;
+    margin: 0 4rem;
     padding: 0.5em 0;
 }
+
 
 span {
     display: inline-block;
@@ -122,7 +130,7 @@ span i {
 }
 
 input[type='search'] {
-    grid-column: 5/span 2;
+    grid-column: 8/span 2;
     grid-row: 1/1;
     border-radius: 4px;
     border: 1px solid lightgray;
@@ -130,4 +138,83 @@ input[type='search'] {
 
 .lower-nav {
     background-color: darkviolet;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lower-nav>* {
+    margin: 0 4rem;
+}
+
+.lower-nav>ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4%;
+}
+
+.lower-nav>button {
+    border-style: none;
+    border-radius: 2px;
+    color: white;
+    background-color: darkviolet;
+    filter: brightness(75%);
+    padding: 0.4rem;
+}
+
+/* Footer Section  */
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    /* align-content: stretch; */
+}
+
+.footer__upper {
+    background-color: darkviolet;
+    justify-content: center;
+    padding: 0.5rem 0;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.footer__lower {
+    background-color: #222;
+    color: #fff;
+    height: 8rem;
+    position: relative;
+}
+
+.footer__upper>ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 3%;
+}
+
+.footer__upper>li {
+    display: inline-block;
+    flex-basis: calc(94%/3);
+}
+
+.footer__lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__lower>span {
+    position: absolute;
+    top: 30px;
+}
+
+.footer__lower>p {
+    position: absolute;
+    top: 80px;
 }
