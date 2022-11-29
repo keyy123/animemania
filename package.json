@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "snowpack dev",
-    "build": "snowpack build"
+    "build": "snowpack build",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "snowpack": "^3.8.8"
   }
 }

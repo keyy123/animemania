@@ -1,5 +1,8 @@
 let toggleButton = document.querySelector(".checkbox");
-toggleButton.addEventListener("click", () => {
+toggleButton.addEventListener("click", toggleDarkMode);
+
+function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-    console.log("done!")
-});
+}
+
+module.exports = { toggleDarkMode };
